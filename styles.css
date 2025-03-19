@@ -122,4 +122,25 @@ input[type="number"] {
     font-size: 0.8rem;
     font-style: italic;
     margin: 0;
+}
+
+.code-display {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: none;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.code-display pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-display code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
 } 

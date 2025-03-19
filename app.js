@@ -11,6 +11,43 @@ function addUpToSecond(n) {
     return n * (n + 1) / 2;
 }
 
+// Code display functionality
+let selectedAlgorithm = null;
+const algorithmCode = {
+    addUpToFirst: `function addUpToFirst(n) {
+    let total = 0;
+    for (let i = 0; i <= n; i++) {
+        total += i;
+    }
+    return total;
+}`,
+    addUpToSecond: `function addUpToSecond(n) {
+    return n * (n + 1) / 2;
+}`
+};
+
+function toggleCode(algorithmName) {
+    const codeDisplay = document.getElementById('code-display');
+    const codeContent = document.getElementById('code-content');
+    
+    if (selectedAlgorithm === algorithmName && codeDisplay.style.display === 'block') {
+        codeDisplay.style.display = 'none';
+        selectedAlgorithm = null;
+    } else {
+        codeDisplay.style.display = 'block';
+        codeContent.textContent = algorithmCode[algorithmName];
+        selectedAlgorithm = algorithmName;
+    }
+}
+
+function plotSelectedAlgorithm() {
+    if (!selectedAlgorithm) {
+        alert('Please select an algorithm first by clicking one of the algorithm buttons.');
+        return;
+    }
+    runAlgorithm(selectedAlgorithm);
+}
+
 // Chart configuration
 const ctx = document.getElementById('performanceChart').getContext('2d');
 const chart = new Chart(ctx, {
