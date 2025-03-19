@@ -40,7 +40,7 @@ const chart = new Chart(ctx, {
                 },
                 ticks: {
                     callback: function(value) {
-                        return value.toExponential();
+                        return (value).toFixed(0);
                     }
                 }
             },
