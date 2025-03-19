@@ -85,7 +85,7 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #6c757d;
     color: white;
 }
 
@@ -96,6 +96,11 @@ h1 {
 
 .btn-dark {
     background-color: #343a40;
+    color: white;
+}
+
+.btn.active {
+    background-color: #007bff;
     color: white;
 }
 

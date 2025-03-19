@@ -30,7 +30,20 @@ function toggleCode(algorithmName) {
     const codeContent = document.getElementById('code-content');
     codeContent.textContent = algorithmCode[algorithmName];
     selectedAlgorithm = algorithmName;
+    
+    // Update active state of buttons
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.textContent === algorithmName) {
+            btn.classList.add('active');
+        }
+    });
 }
+
+// Auto-activate first button on page load
+document.addEventListener('DOMContentLoaded', () => {
+    toggleCode('addUpToFirst');
+});
 
 function plotSelectedAlgorithm() {
     if (!selectedAlgorithm) {
