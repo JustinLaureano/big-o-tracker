@@ -24,6 +24,13 @@ body {
     width: 100%;
 }
 
+.main-content {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    margin-top: 1rem;
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -105,6 +112,27 @@ input[type="number"] {
     width: 120px;
 }
 
+.code-display {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 1rem;
+    display: block;
+    width: fit-content;
+    min-width: 300px;
+    height: fit-content;
+}
+
+.code-display pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-display code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 .chart-container {
     flex: 1;
     background: white;
@@ -122,25 +150,4 @@ input[type="number"] {
     font-size: 0.8rem;
     font-style: italic;
     margin: 0;
-}
-
-.code-display {
-    background-color: #f8f9fa;
-    border-radius: 4px;
-    padding: 1rem;
-    margin: 1rem 0;
-    display: none;
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-.code-display pre {
-    margin: 0;
-    white-space: pre-wrap;
-}
-
-.code-display code {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    line-height: 1.5;
 } 

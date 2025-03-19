@@ -27,17 +27,9 @@ const algorithmCode = {
 };
 
 function toggleCode(algorithmName) {
-    const codeDisplay = document.getElementById('code-display');
     const codeContent = document.getElementById('code-content');
-    
-    if (selectedAlgorithm === algorithmName && codeDisplay.style.display === 'block') {
-        codeDisplay.style.display = 'none';
-        selectedAlgorithm = null;
-    } else {
-        codeDisplay.style.display = 'block';
-        codeContent.textContent = algorithmCode[algorithmName];
-        selectedAlgorithm = algorithmName;
-    }
+    codeContent.textContent = algorithmCode[algorithmName];
+    selectedAlgorithm = algorithmName;
 }
 
 function plotSelectedAlgorithm() {
