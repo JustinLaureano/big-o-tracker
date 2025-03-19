@@ -152,7 +152,38 @@ input[type="number"] {
 .hint {
     text-align: center;
     color: #666;
-    font-size: 0.8rem;
-    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.quick-plots {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quick-plots-label {
+    color: #666;
+    font-size: 0.9rem;
     margin: 0;
+}
+
+.quick-plot-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.btn-quick {
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-quick:hover {
+    background-color: #dee2e6;
 } 
