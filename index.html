@@ -9,17 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Performance Tracker</h1>
-        <p class="subtitle">Choose a function and start plotting!</p>
-        
-        <div class="buttons">
-            <button class="btn btn-primary" onclick="runAlgorithm('addUpToFirst')">addUpToFirst</button>
-            <button class="btn btn-secondary" onclick="runAlgorithm('addUpToSecond')">addUpToSecond</button>
-        </div>
-
-        <div class="input-group">
-            <input type="number" id="n-value" placeholder="Enter n value" value="100">
-            <button class="btn btn-dark" onclick="runAlgorithm('addUpToFirst')">Plot!</button>
+        <div class="header">
+            <h1>Performance Tracker</h1>
+            <p class="subtitle">Choose a function and start plotting!</p>
+            <div class="controls">
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="runAlgorithm('addUpToFirst')">addUpToFirst</button>
+                    <button class="btn btn-secondary" onclick="runAlgorithm('addUpToSecond')">addUpToSecond</button>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="n-value" placeholder="Enter n value" value="100">
+                    <button class="btn btn-dark" onclick="runAlgorithm('addUpToFirst')">Plot!</button>
+                </div>
+            </div>
         </div>
 
         <div class="chart-container">

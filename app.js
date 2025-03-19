@@ -22,6 +22,14 @@ const chart = new Chart(ctx, {
     options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+            padding: {
+                top: 10,
+                right: 10,
+                bottom: 10,
+                left: 10
+            }
+        },
         scales: {
             x: {
                 type: 'linear',
@@ -46,6 +54,11 @@ const chart = new Chart(ctx, {
         plugins: {
             legend: {
                 position: 'top',
+                align: 'center',
+                labels: {
+                    boxWidth: 15,
+                    padding: 10
+                }
             },
             tooltip: {
                 callbacks: {
