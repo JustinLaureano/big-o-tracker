@@ -134,9 +134,14 @@ function updateChart() {
     const existingDatasets = new Set(chart.data.datasets.map(ds => ds.label));
     
     Object.keys(results).forEach(algorithm => {
-        const data = results[algorithm].n.map((n, i) => ({
+        // Create paired array of [n, time] values and sort by n
+        const paired = results[algorithm].n.map((n, i) => [n, results[algorithm].time[i]]);
+        paired.sort((a, b) => a[0] - b[0]);
+        
+        // Create sorted data points
+        const data = paired.map(([n, time]) => ({
             x: n,
-            y: results[algorithm].time[i]
+            y: time
         }));
 
         if (existingDatasets.has(algorithm)) {
